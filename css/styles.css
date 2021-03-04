@@ -1,0 +1,339 @@
+/* Colors used
+
+Background: #ffffff
+Text Color (Black): #000000;
+Primary Color (LightBlue): #1687a7;
+Secondary Color (Dark-Blue): #0081a1;
+ */
+
+ :root {
+   --primary-color: #1687a7;
+   --secondary-color: #0081a1;
+   --dark-grey: #505050;
+   --background-color: #ffffff;
+   --font-color: #000000;
+   --links-color: #ff5c5c;
+
+   --sun-start: #edc665;
+   --sun-ends: #f76414;
+   --font: Roboto;
+   --font-weight: bold;
+   --header-size: 15px;
+ }
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+header,a, h1{
+  font-family: var(--font);
+  color: var(--font-color);
+}
+
+header{
+  font-weight: var(--font-weight);
+  font-size: var(--header-size);
+}
+
+a{text-decoration: none;}
+
+
+.page-header{
+ display: inline-block;
+ width: 100%;
+ padding: 20px;
+ margin: auto;
+ border-bottom: 1px solid lightgrey;
+}
+
+ .page-header__item{
+  flex: 0 1 200px;
+}
+
+
+
+ .page-header__item:last-child {
+  flex-grow: 1;
+  float: right;
+  margin-right: 15%;
+}
+
+
+  .navigation-list li{
+  display: inline-block;
+  padding-right: 15px;
+
+}
+
+
+
+/* start grid fallback */
+.grid__item {
+ display: inline-block;
+ width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+ .grid {
+   display: grid;
+   /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 20px;
+   margin: 0;
+
+ }
+ .grid__item {
+   background-color: lightgray;
+   width: auto;
+   min-height: auto;
+   margin: 0;
+ }
+ .grid__item:last-child {
+   grid-column: 3 / 3;
+   grid-row: 1 / 3;
+ }
+}
+
+.page-footer{
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+
+/* Index - Content */
+
+.logo{
+  width:320px;
+  height:80px;
+  float: left;
+}
+
+.portrait{
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  float: left;
+  padding: 20px;
+
+}
+
+
+.content{
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 30px;
+}
+
+.web-word{
+  font-weight: var(--font-weight);
+}
+
+/* About Me - Content */
+
+
+.experience{
+  list-style-type: none;
+  text-align: center;
+}
+
+/* Navbar */
+
+
+/* Anchor attributes */
+
+a:visited{
+ color: #0000;
+}
+a:hover, a:focus{
+  text-decoration: none;
+}
+a:active{
+ color: var(--primary-color);
+}
+
+
+/* Buttons */
+
+
+ .button, button{
+  /* Overwrite browser default values and resets the borders */
+  border: none;
+  display: inline-block;
+  /* takes the font form the outer container */
+  font-family: var(--font);
+  /* Styles the button */
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type and color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s opacity;
+
+}
+
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus{
+/* Let the mouse appear as a hand when hovering over the button */
+cursor: pointer;
+/* Reduce the opacity of the button by 0.8% */
+opacity: 0.8;
+font-family: var(--font);
+}
+
+
+/* Apply transition to links */
+
+a:hover, a:focus{
+  /* Overwrite browser default settings */
+  border: none;
+  /* Take font from outer container */
+  font-family: var(--font);
+  /* Style the links */
+  color: var(--links-color);
+
+}
+
+/* Changin width size of text-box and text-area */
+
+#contact-tel, #contact-email, #contact-message{
+  width: 20%;
+}
+
+
+
+/* Tables */
+
+.table, td, th{
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid;
+}
+
+/* Animations */
+
+@keyframes color-change {
+
+  from{
+    fill: var(--sun-start);
+  }
+
+  to{
+    fill: var(--sun-ends);
+  }
+
+}
+
+@keyframes slide-in-text {
+
+  from{
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to{
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.content p,h1{
+  animation-duration: 1s;
+  animation-name: slide-in-text;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+
+/* LONG VERSION FOR ANIMATIONS */
+ /* .sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+} */
+
+/* SHORT VERSION FOR ANIMATIONS  */
+.sun{
+  animation: 4s color-change infinite alternate linear;
+
+}
+
+
+
+@keyframes cloud-move {
+  from{
+    transform: translate(0, 50px);
+  }
+  to{
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front{
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+
+@keyframes cloud-move-reverse {
+  from{
+    transform: translate(446px, 48px);
+  }
+  to{
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back{
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+
+
+
+/* Media Questries */
+
+
+@media all and (max-width: 500px) {
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  h1{font-size: 22px;}
+  h2{font-size: 19px;}
+  p{font-size: 15px;}
+  a{font-size: 12px;}
+}
+
+@media all and (min-width:500px) and (max-width: 750px) {
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  h1{font-size: 25px;}
+}
+
+@media all and (max-width: 750px) {
+  .grid{
+    grid-gap: 10px;
+  }
+  .grid__item:last-child{
+    grid-column: auto/auto;
+    grid-row: auto/auto;
+  }
+}

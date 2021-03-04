@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Max Rosales - Portfolio</title>
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.production.css">
+</head>
+
+<header class="page-header">
+
+    <!-- Add logo here -->
+    <img src="../img/logo.png" alt="Maximilian Rosales logo" class="logo" class="page-header__item">
+
+    <nav class="page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="../index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="../html/about.html" role="menuitem" class="navigation-list__item">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="../html/contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+        <li role="presentation">
+          <a href="../html/work.html" role="menuitem" class="navigation-list__item">Work</a>
+        </li>
+      </ul>
+    </nav>
+
+
+</header>
+
+<body>
+<section>
+  <h1>Contact</h1>
+
+  <div class="contact_details">
+    Maximilian Rosales <br>
+    Berliner Strasse 30 <br>
+    2345, Berlin <br>
+    Deutschland <br>
+    <br>
+    <a href="tel:+491234567">Tel: +491234567</a>
+    <br>
+    <br>
+    <a href="mailto:maxrowk@gmail.com?subject=Hello there, Im contacting from your site">Gmail: maxrowk@gmail.com</a>
+    <br>
+    <br>
+    <a href="mailto:maxrowk@gmail.com?subject=feedback" class="Contact_me_button">Contact Me</a>
+    <br>
+    <br>
+  </div>
+</section>
+
+<form id="contact-form" action="" method="post">
+
+  <label class="standart-label" for="contact-email">Email:* </label>
+  <br>
+  <input type="email" id="contact-email" required> <br>
+
+  <label class="standart-label" for="contact-tel">Tel: </label>
+  <br>
+  <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel"><br>
+
+  <label class="standart-label" for="contact-message">Message:* </label>
+  <br>
+  <textarea maxlength="240" id="contact-message" required></textarea>
+  <br>
+  <br>
+  <input type="submit" value="Send Message">
+  <input type="reset">
+
+</form>
+
+
+
+
+
+<script src="../js/tota11y.min.js"></script>
+
+</body>
+
+<footer class="footer">
+  <p>Find me on</p>
+
+  <a href="https://github.com/roswerk/" target="_blank"><img src="../img/icon_gitHub.svg" alt="Find me on GitHub"></a>
+  <a href="https://www.instagram.com/maxroswerk/" target="_blank"><img src="../img/icon_instagram.svg" alt="Find me on Instagram"></a>
+  <a href="https://www.linkedin.com/in/max-rosales-923565120/" target="_blank"><img src="../img/icon_linkedIn.svg" alt="Find me on LinkedIn"></a>
+
+</footer>
+
+</html>
