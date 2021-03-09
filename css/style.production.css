@@ -180,9 +180,29 @@ a:active{
  color: #1687a7;
 }
 
+/* Apply transition to links */
+
+a:hover{
+  /* Overwrite browser default settings */
+  border: none;
+  /* Take font from outer container */
+  font-family: Roboto;
+  /* Style the links */
+  color: #ff5c5c;
+
+}
+
+a:focus{
+  /* Overwrite browser default settings */
+  border: none;
+  /* Take font from outer container */
+  font-family: Roboto;
+  /* Style the links */
+  color: #ff5c5c;
+
+}
 
 /* Buttons */
-
 
  .button{
   /* Overwrite browser default values and resets the borders */
@@ -263,27 +283,6 @@ font-family: Roboto;
 }
 
 
-/* Apply transition to links */
-
-a:hover{
-  /* Overwrite browser default settings */
-  border: none;
-  /* Take font from outer container */
-  font-family: Roboto;
-  /* Style the links */
-  color: #ff5c5c;
-
-}
-
-a:focus{
-  /* Overwrite browser default settings */
-  border: none;
-  /* Take font from outer container */
-  font-family: Roboto;
-  /* Style the links */
-  color: #ff5c5c;
-
-}
 
 /* Changin width size of text-box and text-area */
 
