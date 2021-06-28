@@ -12,13 +12,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/style.production.css">
+    <!-- <link rel="stylesheet" href="../css/style.production.css"> -->
+    <link rel="stylesheet" href="../css//styles.css">
   </head>
   <body>
   <header class="page-header">
 
       <!-- Add logo here -->
-      <img src="../img/logo.png" alt="Maximilian Rosales logo" class="logo page-header__item">
+      <img src="../img/logo.png" alt="Maximilian Rosales logo" class="logo" class="page-header__item">
 
       <nav class="page-header__item">
         <ul role="menubar" class="navigation-list">
@@ -41,34 +42,47 @@
   <section>
     <h1>Work</h1>
 
-    <div class="grid">
+    <div class="workProjects">
       <!-- My grid items will live here -->
 
-     <div class="grid__item">
-       <h2>Mobile Web App</h2>
-       <p>This mobile app was designed for a fashion store as a e-commerce site. The requirements where a catalog, a shopping cart, credit card and paypal as a payment method and some filter features. It took 3 months to complete.</p>
+     <div class="pokedexBox thing">
+       <h2>Pokedex</h2>
+       <img src="../img/pokedex.png" class="images">
+       <p class="text">Basic Pokedex project built using Html, CSS, and JS</p>
+       <a href="https://roswerk.github.io/Simple-JS-App/" class="life" target="_blank">Life Version</a>
          <br>
-         <a href="https://github.com" target="_blank">See project on Github</a>
+         <a href="https://github.com/roswerk/Simple-JS-App" target="_blank">See project on Github</a>
      </div>
-     <div class="grid__item">
-       <h2>Web App</h2>
-       <p>This stock Web App was a project required by a flower shop who needed to organize their sales, monthly costs and clients profiles for a better handling of vital data on the business. It took 2 months to develop.</p>
+
+     <div class="backEndBox thing">
+       <h2>Movies Info BackEnd with NodeJs</h2>
+       <img src="../img/backend.jpeg" class="images">
+       <p class="text">This was a backend project built with Express, NodeJS and MongoDB. The purpose was to create the backend logic to store movies, directors and genres about movies form the 90s. It was the ground for the next project, 
+         the front-end React 90s Movies site.</p>
+         <a href="https://github.com/roswerk/90s-Movie-API-server" class="life" target="_blank">Life Version</a>
          <br>
-         <a href="https://github.com" target="_blank">See project on Github</a>
+         <a href="https://github.com/roswerk/90s-Movie-API-server" target="_blank">See project on Github</a>
+      </div>
+     </div>
+
+     <div class="workProjects">
+
+     <div class="frontEndBox thing">
+       <h2>Movies Info FrontEnd with React</h2>
+       <img src="../img/frontend.png" class="images">
+       <p class="text">This project was a React front-end movies info site. We built it using MVC architecture and also used some Redux as a complement in some components.</p>
+       <a href="https://90smovies.netlify.app/" class="life" target="_blank">Life Version</a>
+         <br>
+         <a href="https://github.com/roswerk/90s-Movie-API-client" target="_blank">See project on Github</a>
 
      </div>
-     <div class="grid__item">
-       <h2>Personal Website</h2>
-       <p>As all proffesionals need to distinguish themself from their competition, this website was build for a Lawyer who needed to present their services, some costumer reviews and fees. It took 1 month to fully develop this site, and also included a payment method for their current clients.</p>
+     <div class="pwaBox thing">
+       <h2>PWA with React and DataVisualization</h2>
+       <img src="../img/pwa.png" class="images">
+       <p class="text">This project was developed using TDD, BDD and ATDD. We used Jest, Cucumber, Puppetter and Gherkins as testing tools; additionally we implemented a deployment Pipeline. <br> <br> <br> Another feature to mention is that this project includes Google Api authentification and DataVisualization tools</p>
+       <a href="https://roswerk.github.io/MeetApp/" class="life" target="_blank">Life Version</a>
          <br>
-         <a href="https://github.com" target="_blank">See project on Github</a>
-
-     </div>
-     <div class="grid__item">
-       <h2>Flappy bird App</h2>
-       <p>The good old Flappy bird, it was a remake of the legendary game who revolutionated the Games on Apps. It took 3 month to develop and test.</p>
-         <br>
-         <a href="https://github.com" target="_blank">See project on Github</a>
+         <a href="https://github.com/roswerk/MeetApp" target="_blank">See project on Github</a>
 
      </div>
 
